@@ -1,0 +1,34 @@
+KERANGKA PRESENTASI UTS – SUARA KAMPUS
+
+1. Latar belakang
+Pengaduan fasilitas ditulis dalam bentuk teks. Pengelompokan manual
+membutuhkan waktu.
+
+2. Tujuan
+Membuat aplikasi yang memprediksi kategori fasilitas secara otomatis
+berdasarkan judul dan deskripsi laporan.
+
+3. Metode
+Multinomial Naive Bayes sebagai algoritma klasifikasi teks dan TF-IDF
+sebagai pembobotan fitur.
+
+4. Alur sistem
+Teks laporan -> TF-IDF -> Multinomial Naive Bayes -> probabilitas tiap
+kategori -> kategori dengan probabilitas tertinggi.
+
+5. Dataset
+80 teks contoh berlabel, terbagi ke dalam 8 kategori. Data ini dibuat
+untuk demonstrasi dan bukan data historis kampus.
+
+6. Pengujian
+Data dibagi stratified 75% latih dan 25% uji. Tampilkan accuracy,
+precision, recall, F1-score, serta confusion matrix dari aplikasi.
+
+7. Demo
+Kirim laporan baru sebagai mahasiswa. Tunjukkan prediksi kategori dan
+confidence. Masuk sebagai admin untuk melihat evaluasi model.
+
+8. Kesimpulan dan pengembangan
+Model membantu klasifikasi awal, tetapi admin tetap memeriksa hasil.
+Kinerja perlu diuji ulang dengan dataset kampus yang lebih besar dan
+telah dianonimkan.

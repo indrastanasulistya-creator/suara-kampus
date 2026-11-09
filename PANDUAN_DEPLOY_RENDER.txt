@@ -1,0 +1,20 @@
+PANDUAN DEPLOY SUARA KAMPUS (DEMO) KE RENDER
+
+Isi folder ini adalah isi root repository GitHub. Upload seluruh file dan folder ini ke repository GitHub baru.
+
+PENGATURAN RENDER
+- New > Web Service, lalu hubungkan repository GitHub.
+- Root Directory: kosongkan (root repository).
+- Runtime: Python 3
+- Build Command: pip install -r requirements.txt
+- Start Command: gunicorn --bind 0.0.0.0:$PORT server:app
+- Pilih paket Free untuk uji coba bila tersedia.
+
+CATATAN PENTING SEBELUM DIPUBLIKASIKAN
+1. Ini masih DEMO akademik. Laporan disimpan di localStorage browser, bukan database server. Artinya laporan mahasiswa tidak otomatis terlihat di browser/admin lain dan bisa hilang jika data browser dihapus.
+2. Login admin masih mode demo dan bukan autentikasi aman. Jangan gunakan data pribadi/NIM asli atau informasi sensitif.
+3. Dataset 80 baris adalah data contoh. Hasil evaluasi AI tidak mewakili kondisi kampus sebenarnya.
+4. QR di halaman depan masih ilustrasi, belum QR yang dapat dipakai untuk akses publik.
+5. Untuk penggunaan kampus sungguhan, perlu backend database bersama, autentikasi aman, validasi/otorisasi admin, dan kebijakan privasi sebelum mengumpulkan data mahasiswa.
+
+Setelah Render selesai deploy, gunakan URL onrender.com yang diberikan Render. Pada paket gratis, layanan dapat tidur setelah tidak aktif dan perlu beberapa saat untuk aktif kembali saat dibuka.
